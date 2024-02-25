@@ -4,43 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OopsFeedMeCode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         .header {
-            background-color: #444;
+            background-color: #1a73e8; /* Changed to a brighter blue */
             color: #fff;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
+            border-bottom: 5px solid #0f57c2; /* Added a darker blue border */
         }
+
         .header h1 {
             margin: 0;
             font-size: 2.5em;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Added a subtle text shadow */
         }
+
         .header p {
             margin: 10px 0 0;
             font-size: 1.2em;
+            font-style: italic; /* Added italic style */
         }
-        .content {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .playlist {
-            margin-bottom: 30px;
-        }
-        .playlist h2 {
+                .contact h2 {
             font-size: 1.8em;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
-        iframe {
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.left-section {
+    margin-right: 20px;
+}
+
+.linkedin-badge {
+    margin-top: 0; /* Adjust the top margin as needed */
+    align-self: flex-start;
+}
+
+.contact-info {
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.right-section {
+    flex: 1;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0; /* Adjust the top margin as needed */
+    margin-left: 5;
+    color: #333333;
+}
+
+
+.description p {
+    margin-bottom: 10px;
+}
+
+.description h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #1a73e8; /* Adjust the color to match your theme */
+}
+
+.description a {
+    color: #1a73e8; /* Adjust the color to match your theme */
+    text-decoration: none;
+}
+
+.description a:hover {
+    text-decoration: underline;
+}
+
+.description #hashtags {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 5px;
+}
+
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-section {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .right-section {
+                width: 100%;
+            }
+        }
+
+
+        .content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .playlist, .intro {
+            margin-bottom: 40px;
+        }
+        .playlist h2, .intro h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .playlist iframe {
             width: 100%;
-            height: 315px;
+            border-radius: 8px;
+            border: none;
+        }
+        .shorts iframe {
+            height: 720px;
+        }
+        .videos iframe {
+            height: 720px;
+        }
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.6;
         }
         @media (max-width: 768px) {
             .header h1 {
@@ -49,27 +176,70 @@
             .header p {
                 font-size: 1em;
             }
-            .playlist h2 {
+            .playlist h2, .intro h2 {
                 font-size: 1.5em;
+            }
+            .content {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>OopsFeedMeCode</h1>
-        <p>Welcome to my YouTube channel!</p>
+        <h1>Oops! Feed Me Code</h1>
+        <p>Happy Learning</p>
     </div>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="linkedin-badge">
+                <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="arunveersingh" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/arunveersingh?trk=profile-badge"></a></div>
+            </div>
+            <div class="contact-info">
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/oopsfeedmecode" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/oopsfeedmecode" target="_blank"><i class="fas fa-x"></i></a></li>
+                    <li><a href="https://github.com/arunveersingh" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://youtube.com/@oopsfeedmecode" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <p><a href="mailto:oopsfeedmecode@gmail.com"><i class="fas fa-envelope"></i> oopsfeedmecode@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="description">
+                <p>Hello, I'm Arun, with 14 years of experience in the IT industry. I love to learn and share. Welcome to "Oops! Feed Me Code," where software development meets excellence.</p>
+                
+                <p>Our focus includes Object-Oriented Programming, Code Refactoring, Design Patterns, Architecture, Design, Generative AI, and more. We champion scalable, maintainable code - the key to quality software and reduced development costs.</p>
+                
+                <p>Whether you're a seasoned architect or an aspiring coder, "Oops! Feed Me Code" is your hub for enhancing skills and building software to be proud of.</p>
+                
+                <p>Subscribe for insights and best practices in the art of software development. Let's write less code, but the right code, together! 🚀💻👨‍💻👩‍💻</p>
+                
+                <p id="hashtags">#coding #programmingtips #generativeai #systemdesign #architecture #designpatterns #coderefactoring</p>
+            </div>
+        </div>
+    </div>
+
+
     <div class="content">
-        <div class="playlist">
-            <h2>Playlist 1</h2>
+        <div class="playlist shorts">
+            <h2>Java One Minute Class (Shorts)</h2>
             <iframe src="https://www.youtube.com/embed/videoseries?list=PL0rh0e_JogjkPBCZURSUETBb0UGNw3g30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="playlist">
-            <h2>Playlist 2</h2>
-            <iframe src="https://youtu.be/_kdyaK-Uwyg?si=LHOhIGUIzOFtKe5r" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="playlist shorts">
+            <h2>Generative AI (Shorts)</h2>
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL0rh0e_JogjlEKlwAp3hGD44hSOxIFQYD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <!-- Add more playlists as needed -->
+        <div class="playlist videos">
+            <h2>Code Refactoring Series</h2>
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL0rh0e_JogjlGDc0KUodpAbCVUtHIRZTO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="playlist videos">
+            <h2>Kotlin Series</h2>
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL0rh0e_JogjlyXN24dVTYSug5fuha0bKM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 </body>
 </html>
