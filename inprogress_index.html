@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website</title>
+  
+  <!-- Simple styling (Tailwind-like utility or custom) -->
+  <style>
+    /* Reset and simple base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 1000px;
+      background: #fff;
+      border-radius: 8px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    /* Navigation (optional) */
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #0d1117;
+      padding: 10px 0;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #c9d1d9;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #21262d;
+    }
+    /* Search bar */
+    #searchBar {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #searchInput {
+      width: 50%;
+      padding: 8px;
+      font-size: 16px;
+    }
+    /* Common section styling */
+    section {
+      margin-bottom: 20px;
+      display: block; /* ensures each is recognized as a block for searching */
+    }
+    .section-title {
+      margin-bottom: 10px;
+      font-size: 1.4em;
+      color: #0d1117;
+    }
+    /* Video list styling */
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .videos iframe {
+      width: 300px;
+      height: 170px;
+      border: none;
+      border-radius: 4px;
+    }
+    /* Article lists (LinkedIn, GitHub) */
+    .articles ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+    .articles li {
+      margin: 8px 0;
+    }
+    .articles a {
+      color: #0073b1; /* LinkedIn-ish color */
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .articles a:hover {
+      color: #005582;
+    }
+    /* Profile & Contact */
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .discord-link {
+      color: #7289da; /* Discord's brand color */
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .discord-link:hover {
+      text-decoration: underline;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar (Optional) -->
+  <nav>
+    <a href="#profile">Profile</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#linkedin">LinkedIn</a>
+    <a href="#github">GitHub</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Search Bar -->
+  <header id="searchBar">
+    <h1>Welcome to My Personal Website</h1>
+    <p>Use the search bar below to filter sections by keyword (e.g., “video” or “LinkedIn”).</p>
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search sections..." 
+      onkeyup="searchSections()" />
+  </header>
+
+  <!-- Profile Section -->
+  <section id="profile">
+    <h2 class="section-title">My Profile</h2>
+    <div class="profile-details">
+      <!-- Replace with your actual profile photo path or link. -->
+      <img class="profile-photo" src="https://via.placeholder.com/120" alt="Profile Photo" />
+      <p>
+        Hello! I’m <strong>Your Name</strong>, a developer & content creator. I share coding tutorials on YouTube, 
+        write articles on LinkedIn, and also host articles on my GitHub repo.
+      </p>
+      <p>Feel free to browse around and reach out if you have any questions!</p>
+    </div>
+  </section>
+
+  <!-- YouTube Videos Section -->
+  <section id="youtube">
+    <h2 class="section-title">YouTube Videos - Oops! Feed Me Code</h2>
+    <div class="videos">
+      <!-- Replace VIDEO_ID with your actual YouTube video IDs or embed multiple iframes. -->
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID1" 
+        allowfullscreen>
+      </iframe>
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID2" 
+        allowfullscreen>
+      </iframe>
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID3" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- LinkedIn Articles Section -->
+  <section id="linkedin">
+    <h2 class="section-title">My LinkedIn Articles</h2>
+    <div class="articles">
+      <ul>
+        <!-- Replace the href links with your real LinkedIn article URLs -->
+        <li><a href="https://www.linkedin.com/pulse/sample-article-1" target="_blank">LinkedIn Article Title 1</a></li>
+        <li><a href="https://www.linkedin.com/pulse/sample-article-2" target="_blank">LinkedIn Article Title 2</a></li>
+        <li><a href="https://www.linkedin.com/pulse/sample-article-3" target="_blank">LinkedIn Article Title 3</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GitHub Articles Section -->
+  <section id="github">
+    <h2 class="section-title">Articles from My GitHub Repo</h2>
+    <div class="articles">
+      <ul>
+        <!-- Replace the href links with your real GitHub repo article URLs or file paths -->
+        <li><a href="https://github.com/YourUser/YourRepo/blob/main/article1.md" target="_blank">GitHub Article 1</a></li>
+        <li><a href="https://github.com/YourUser/YourRepo/blob/main/article2.md" target="_blank">GitHub Article 2</a></li>
+        <li><a href="https://github.com/YourUser/YourRepo/blob/main/article3.md" target="_blank">GitHub Article 3</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact / Discord Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>If you’d like to get in touch, join my Discord or send me a message there!</p>
+    <!-- Replace with your actual Discord link or server invite URL. -->
+    <p>
+      <a class="discord-link" href="https://discord.gg/YOUR_INVITE_LINK" target="_blank">
+        Join My Discord
+      </a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Your Name</p>
+  </footer>
+
+  <!-- Simple Search Functionality (Vanilla JS) -->
+  <script>
+    // Display current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function searchSections() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const sections = document.querySelectorAll('section');
+
+      sections.forEach(section => {
+        const textContent = section.innerText.toLowerCase();
+        if (textContent.includes(query)) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
